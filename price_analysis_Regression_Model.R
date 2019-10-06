@@ -10,8 +10,9 @@ library(lubridate)
 #label=FALSE enable to store weekday as a number.
 merged_df$day<- wday(merged_df$date_time, label = FALSE)
 
-
-
+#Removing the rows where which are empty due to left joins in weather.
+empty_location<-which(merged_df$merge_date_w =="")
+merged_df<- merged_df[-empty_location,]
 
 
 #Making a data frame with sensible columns
