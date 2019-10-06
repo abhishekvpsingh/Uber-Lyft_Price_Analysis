@@ -11,6 +11,9 @@ library(lubridate)
 merged_df$day<- wday(merged_df$date_time, label = FALSE)
 
 
+
+
+
 #Making a data frame with sensible columns
 #removing all the unwanted columns
 cab <- data.frame(merged_df$price,merged_df$surge_multiplier,merged_df$distance, merged_df$day,
